@@ -1,87 +1,92 @@
-# Real-Time Chat Application with WebSocket
+Collaborative Drawing Board with WebSocket
+A real-time collaborative drawing application built with Node.js, Express, and Socket.IO, enabling multiple users to draw on the same canvas simultaneously in their browsers.
 
-A modern real-time chat application built with **Node.js** and **WebSocket**, supporting user identification and online user counting, designed with a clean and responsive UI.
-## 👤 Profile
+👤 Profile
+Field	Information
+Name	Ridho Fauzi
+NIM	312310563
+Class	TI.23.A.5
 
-| Field  | Information         |
-|--------|----------------------|
-| Name   | Ridho Fauzi          |
-| NIM    | 312310563            |
-| Class  | TI.23.A.5            |
+🚀 Features
+Real-time collaborative drawing across multiple clients.
 
-## 🚀 Features
+Full-duplex communication using WebSocket (Socket.IO).
 
-- Unique user ID assigned automatically.
-- Real-time chat without page reloads.
-- Live online user counter.
-- Notifications when users join or leave.
-- Automatic reconnection when WebSocket disconnects.
-- Modern, responsive chat UI (HTML + CSS).
-- Basic XSS protection on messages.
+Lightweight client-side drawing logic with canvas.
 
-## 🛠️ Tech Stack
+Automatic broadcasting of drawing events to all users.
 
-- **Backend:** Node.js, [ws](https://www.npmjs.com/package/ws) WebSocket library
-- **Frontend:** HTML, CSS, JavaScript (Vanilla)
-- **Protocol:** WebSocket (Full-duplex communication)
+Simple and responsive UI.
 
-## 📂 Project Structure
+🛠️ Tech Stack
+Backend: Node.js, Express, Socket.IO
 
-```
-├── server.js         # WebSocket server
-├── index.html        # Chat client UI
-├── README.md         # Project documentation
-```
+Frontend: HTML, CSS, JavaScript (Vanilla), <canvas>
 
-## 🏃‍♂️ How to Run Locally
+Protocol: WebSocket via Socket.IO (built on top of WebSocket)
 
-1. **Clone this repository:**
+📂 Project Structure
+csharp
+Salin
+Edit
+├── public/
+│   └── index.html      # Frontend drawing UI
+├── server.js           # WebSocket server
+├── README.md           # Project documentation
+🏃‍♂️ How to Run Locally
+Clone the repository:
 
-```bash
-git clone https://github.com/your-username/realtime-websocket-chat.git
-cd realtime-websocket-chat
-```
+bash
+Salin
+Edit
+git clone https://github.com/your-username/collaborative-drawing-board.git
+cd collaborative-drawing-board
+Install dependencies:
 
-2. **Install dependencies:**
+bash
+Salin
+Edit
+npm install express socket.io
+Start the server:
 
-```bash
-npm install ws
-```
-
-3. **Start the WebSocket server:**
-
-```bash
+bash
+Salin
+Edit
 node server.js
-```
+Open the app in your browser:
 
-4. **Open the chat client:**
-   
-Just open `index.html` directly in your browser (Chrome, Edge, etc.)
+Navigate to http://localhost:3000
 
-Make sure the server is running at `ws://localhost:8080`.
+Make sure port 3000 is available and not blocked by another process.
 
-> **Tip:** You can use [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) extension in VSCode to serve `index.html` with auto-reload.
+🧪 How It Works
+When a user draws on the canvas, their coordinates are sent to the server via WebSocket.
 
-## 📸 Screenshots
+The server broadcasts this drawing event to all other connected users.
 
-![image](https://github.com/user-attachments/assets/d6af073f-589e-4eb5-b471-5499e103e2c6)
+Other clients receive the event and replicate the drawing in real time.
+
+📸 Screenshots
+![image](https://github.com/user-attachments/assets/e4ad7ab5-7262-497f-abad-ab824cfa9b09)
 
 
+✨ Future Improvements
+Add color picker and brush size options.
 
-*(optional, you can upload screenshots to the repo and update the paths above)*
+Implement undo/redo functionality.
 
-## ✨ Future Improvements
+Save drawing history with a backend database.
 
-- Add user authentication (login system).
-- Save chat history using a database (e.g., MongoDB).
-- Support private one-to-one messaging.
-- Add file/image sharing feature.
-- Dark mode toggle.
-- Emoji support in messages.
+Add user presence indicators (e.g., cursors).
 
-## 📚 References
+Mobile/touch support.
 
-- [MDN WebSocket API Documentation](https://developer.mozilla.org/en-US/docs/Web/API/WebSocket)
-- [RFC 6455 - The WebSocket Protocol](https://datatracker.ietf.org/doc/html/rfc6455)
-- [ws npm package](https://www.npmjs.com/package/ws)
+📚 References
+MDN WebSocket API
+
+Socket.IO Documentation
+
+Node.js Documentation
+
+Express.js Guide
 
