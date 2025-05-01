@@ -1,4 +1,4 @@
-Collaborative Drawing Board with WebSocket
+**Collaborative Drawing Board with WebSocket**
 A real-time collaborative drawing application built with Node.js, Express, and Socket.IO, enabling multiple users to draw on the same canvas simultaneously in their browsers.
 
 👤 Profile
